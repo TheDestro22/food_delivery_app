@@ -89,7 +89,7 @@ class _BakedRiceState extends State<BakedRice> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(bottom: 12, top: 55),
+                      padding: EdgeInsets.only(bottom: 15, top: 55),
                       child: Text(
                         'Describtion',
                         style: TextStyle(
@@ -100,7 +100,7 @@ class _BakedRiceState extends State<BakedRice> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 12),
+                      padding: EdgeInsets.only(bottom: 15),
                       child: Text(
                         'Savor our exquisite Baked Rice, featuring aromatic rice baked to perfection with a blend of exotic spices and tender, marinated chicken. Each bite promises a harmonious medley of flavors, making it a must-try culinary delight.',
                         style: TextStyle(
@@ -110,7 +110,7 @@ class _BakedRiceState extends State<BakedRice> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 12),
+                      padding: EdgeInsets.only(bottom: 15),
                       child: Text(
                         'Delivery',
                         style: TextStyle(
@@ -121,7 +121,7 @@ class _BakedRiceState extends State<BakedRice> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 12),
+                      padding: EdgeInsets.only(bottom: 15),
                       child: Text(
                         'Delivered within 30mins from your location* if placed now.\nCupon Available.',
                         style: TextStyle(
@@ -131,7 +131,7 @@ class _BakedRiceState extends State<BakedRice> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 12),
+                      padding: EdgeInsets.only(bottom: 10),
                       child: Text.rich(TextSpan(
                           text: 'Reviews  ',
                           style: TextStyle(
@@ -159,7 +159,7 @@ class _BakedRiceState extends State<BakedRice> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 170),
+                  padding: EdgeInsets.only(top: 160),
                   child: PrettyFuzzyButton(
                       radius: 90,
                       originalColor: Color(0xFFfa4a0c),
