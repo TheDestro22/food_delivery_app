@@ -8,21 +8,21 @@
             "name": "food_delivery_app",
             "request": "launch",
             "type": "dart",
-            "program": "lib/LoginSignUpPage.dart"
+            "program": "lib/Main.dart"
         },
         {
             "name": "food_delivery_app (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile",
-            "program": "lib/LoginSignUpPage.dart"
+            "program": "lib/Main.dart"
         },
         {
             "name": "food_delivery_app (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release",
-            "program": "lib/LoginSignUpPage.dart"
+            "program": "lib/Main.dart"
         }
     ]
 }
