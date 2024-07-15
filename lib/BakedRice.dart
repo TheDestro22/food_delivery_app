@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:pretty_animated_buttons/pretty_animated_buttons.dart';
+import 'package:simple_animated_button/simple_animated_button.dart';
 
 class BakedRice extends StatefulWidget {
   const BakedRice({super.key});
@@ -12,6 +12,20 @@ class BakedRice extends StatefulWidget {
 
 class _BakedRiceState extends State<BakedRice> {
   String action = 'Add to cart';
+  Color ActionColor = Color(0xFFff470b);
+  Row ActionRow = Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      Text('Add to cart',
+          style: TextStyle(
+              fontFamily: 'Poppins',
+              fontSize: 17,
+              fontWeight: FontWeight.bold,
+              color: Color(0xFFF6F6F9)))
+    ],
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -159,17 +173,57 @@ class _BakedRiceState extends State<BakedRice> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 160),
-                  child: PrettyFuzzyButton(
-                      radius: 90,
-                      originalColor: Color(0xFFfa4a0c),
-                      secondaryColor: Color(0xFF12ab3d),
-                      label: action,
+                  padding: EdgeInsets.only(top: 130),
+                  child: ElevatedButton(
                       onPressed: () {
-                        setstate() {
+                        setState(() {
                           action = 'Added';
-                        }
-                      }),
+                          ActionColor = Color(0xFF12AB3D);
+                          ActionRow = Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 10),
+                                child:
+                                    Icon(Icons.check_circle_outline_outlined),
+                              ),
+                              Text('Added',
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFF6F6F9)))
+                            ],
+                          );
+                        });
+                      },
+                      onLongPress: () {
+                        setState(() {
+                          action = 'Added';
+                          ActionColor = Color(0xFFff470b);
+                          ActionRow = Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text('Add to cart',
+                                  style: TextStyle(
+                                      fontFamily: 'Poppins',
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFFF6F6F9)))
+                            ],
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: ActionColor,
+                        minimumSize: Size(314, 70),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(60),
+                        ),
+                      ),
+                      child: ActionRow),
                 )
               ],
             )));
