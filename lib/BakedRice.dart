@@ -12,8 +12,8 @@ class BakedRice extends StatefulWidget {
 
 class _BakedRiceState extends State<BakedRice> {
   String action = 'Add to cart';
-  Color ActionColor = Color(0xFFff470b);
-  Row ActionRow = Row(
+  Color ActionColor = const Color(0xFFff470b);
+  Row ActionRow = const Row(
     mainAxisAlignment: MainAxisAlignment.center,
     mainAxisSize: MainAxisSize.min,
     children: [
@@ -29,22 +29,22 @@ class _BakedRiceState extends State<BakedRice> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color(0xFFF2F2F2),
+        backgroundColor: const Color(0xFFF2F2F2),
         appBar: AppBar(
-          backgroundColor: Color(0xFFf2f2f2),
+          backgroundColor: const Color(0xFFf2f2f2),
           actions: [
-            Padding(
+            const Padding(
                 padding: EdgeInsets.only(right: 30),
                 child: Icon(Icons.favorite_outline_rounded))
           ],
         ),
         body: Padding(
-            padding: EdgeInsets.only(left: 27, right: 27),
+            padding: const EdgeInsets.only(left: 27, right: 27),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Padding(
+                const Padding(
                   padding: EdgeInsets.only(top: 10, bottom: 0),
                   child: CircleAvatar(
                     radius: 120,
@@ -52,7 +52,8 @@ class _BakedRiceState extends State<BakedRice> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 140, vertical: 20),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 140, vertical: 20),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
@@ -60,38 +61,38 @@ class _BakedRiceState extends State<BakedRice> {
                         width: 10,
                         height: 10,
                         decoration: BoxDecoration(
-                            color: Color(0xFFfa4a0c),
+                            color: const Color(0xFFfa4a0c),
                             borderRadius: BorderRadius.circular(60)),
                       ),
                       Container(
                         width: 10,
                         height: 10,
                         decoration: BoxDecoration(
-                            color: Color(0xFFc4c4c4),
+                            color: const Color(0xFFc4c4c4),
                             borderRadius: BorderRadius.circular(60)),
                       ),
                       Container(
                         width: 10,
                         height: 10,
                         decoration: BoxDecoration(
-                            color: Color(0xFFc4c4c4),
+                            color: const Color(0xFFc4c4c4),
                             borderRadius: BorderRadius.circular(60)),
                       ),
                       Container(
                         width: 10,
                         height: 10,
                         decoration: BoxDecoration(
-                            color: Color(0xFFc4c4c4),
+                            color: const Color(0xFFc4c4c4),
                             borderRadius: BorderRadius.circular(60)),
                       )
                     ],
                   ),
                 ),
-                Text(
+                const Text(
                   'Baked Rice',
                   style: TextStyle(fontFamily: 'Poppins', fontSize: 30),
                 ),
-                Text(
+                const Text(
                   'EGP 60.00',
                   style: TextStyle(
                       fontFamily: 'Poppins',
@@ -99,7 +100,7 @@ class _BakedRiceState extends State<BakedRice> {
                       fontSize: 18,
                       color: Color(0xFFff470b)),
                 ),
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
@@ -173,18 +174,18 @@ class _BakedRiceState extends State<BakedRice> {
                   ],
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 130),
+                  padding: const EdgeInsets.only(top: 130),
                   child: ElevatedButton(
                       onPressed: () {
                         setState(() {
                           action = 'Added';
-                          ActionColor = Color(0xFF12AB3D);
-                          ActionRow = Row(
+                          ActionColor = const Color(0xFF12AB3D);
+                          ActionRow = const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.only(right: 10),
+                                padding: EdgeInsets.only(right: 10),
                                 child:
                                     Icon(Icons.check_circle_outline_outlined),
                               ),
@@ -201,8 +202,8 @@ class _BakedRiceState extends State<BakedRice> {
                       onLongPress: () {
                         setState(() {
                           action = 'Added';
-                          ActionColor = Color(0xFFff470b);
-                          ActionRow = Row(
+                          ActionColor = const Color(0xFFff470b);
+                          ActionRow = const Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -218,9 +219,9 @@ class _BakedRiceState extends State<BakedRice> {
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: ActionColor,
-                        minimumSize: Size(314, 70),
+                        minimumSize: const Size(314, 70),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(60),
+                          borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                       child: ActionRow),
